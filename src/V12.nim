@@ -3,7 +3,10 @@ import os
 import strutils
 import register
 
-discard execShellCmd("cls")
+when defined(windows):
+    discard execShellCmd("cls")
+else:
+    discard execShellCmd("clear")
 
 echo "\e[34mWelcome to the V12 REPL!\e[0m\n"
 echo "\e[32mV12 Version 1\e[0m\n"
@@ -27,7 +30,10 @@ while true:
         echo "TX =", TX
         echo "PX =", PX
     elif input[0] == "clear":
-        discard execShellCmd("cls")
+        when defined(windows):
+            discard execShellCmd("cls")
+        else:
+            discard execShellCmd("clear")
         echo "\e[32mV12 Version 1\e[0m\n"
     else:
         logicise(input)

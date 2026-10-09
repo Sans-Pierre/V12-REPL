@@ -2,7 +2,7 @@
 
 version       = "1"
 author        = "Stefan Chives"
-description   = "A new awesome nimble package"
+description   = "An awesome nimble package"
 license       = "Apache-2.0"
 srcDir        = "src"
 bin           = @["V12"]
