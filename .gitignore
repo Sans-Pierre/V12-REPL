@@ -1,0 +1,8 @@
+*.bat
+*.exe
+*.rc
+*.res
+*.log
+*.tmp
+/tmp
+/test
